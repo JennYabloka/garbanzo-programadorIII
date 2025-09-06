@@ -1,0 +1,68 @@
+/* Tipografía personalizada */
+body {
+    font-family: 'Tourney', cursive;
+    background-color: #f8f9fa;
+    color: #212529;
+    padding-top: 20px;
+}
+
+/* Encabezado */
+header h1 {
+    font-family: 'Tourney', cursive;
+    color: #343a40;
+    font-size: 50px;
+    text-decoration-line: underline;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;   
+}
+
+/* Botones de navegación */
+nav p {
+    font-family: 'Righteous', cursive;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+/* Aplica la fuente personalizada a los botones del nav */
+.btn {
+    font-family: 'Righteous', cursive;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+/* Imágenes personalizadas */
+.Japi {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: 350px;
+    width: 350px;
+}
+
+.SpookyDance {
+    animation: saltarin 1.5s infinite;
+}
+
+/* Animación divertida */
+@keyframes saltarin {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+.FooterText {
+    font-family: 'Righteous', cursive;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
