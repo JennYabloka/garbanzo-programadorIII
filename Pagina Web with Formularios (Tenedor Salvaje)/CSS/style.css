@@ -1,0 +1,665 @@
+/*Diseño de toda las paginas y sub-paginas*/
+
+/*Fuentes*/
+
+.pirata-one-regular {
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fascinate-inline-regular {
+  font-family: "Fascinate Inline", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.charm-regular {
+  font-family: "Charm", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.charm-bold {
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.lobster-two-regular {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lobster-two-bold {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lobster-two-regular-italic {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lobster-two-bold-italic {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+/* Estilos - Generales */
+
+body {
+    background-color: #d4c3b4 !important;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #cc5803;
+    color: white;
+    text-align: center;
+    top: 0; /* Deja el Header a ras de la parte superior de la pagina */
+    width: 100%; /* Ocupa todo el ancho de la pagina */
+}
+
+footer {
+    background-color: #582b11;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+/*Estilos - Index*/
+
+/* Hero Section with blurred BG */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+}
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('../IMG/Fondo_Index.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px); /* This blurs the whole image */
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Slogan right */
+.slogan-carousel-right {
+    background: rgba(141, 108, 89, 0.85); /* #8D6C59 with opacity */
+    color: #fffaf6;
+    border-radius: 18px;
+    width: 600px;
+    max-width: 100%;
+    padding: 32px 40px 32px 32px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0 2px 8px #0001;
+    margin-left: auto;
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+/* Welcome section over bg */
+.welcome-section {
+    background: rgba(255, 248, 243, 0.96);
+    border-radius: 18px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 32px 28px;
+    text-align: center;
+    box-shadow: 0 2px 8px #0001;
+    margin-bottom: 32px;
+}
+.welcome-section h1 {
+    color: #cc5803;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+.welcome-section p {
+    color: #6a3d1e;
+    font-size: 1.15rem;
+}
+.cta-btn {
+    background: #cc5803;
+    color: #fffaf6;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 36px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 48px;
+    box-shadow: 0 2px 8px #0001;
+    transition: background 0.2s;
+}
+.cta-btn:hover {
+    background: #ff9505;
+    color: #3d1e0d;
+}
+
+/* Estilos - Productos */
+
+/* Hero Section with blurred BG */
+.productos-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 0;
+    background: url('../IMG/Fondo_Productos.jpg') center center/cover no-repeat;
+    filter: blur(6px);
+    pointer-events: none; /* Allows clicks through the bg */
+}
+body {
+    position: relative;
+    z-index: 1;
+}
+header, footer, main, details, .container, .row {
+    position: relative;
+    z-index: 2;
+}
+
+/* Product Categories*/
+
+details {
+    background: #fff8f3;
+    border-radius: 10px;
+    margin: 24px auto;
+    max-width: 1200px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 0 0 16px 0;
+    transition: box-shadow 0.2s;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 18px 24px;
+    border-radius: 10px 10px 0 0;
+    background: #c0ab9f;
+    color: #3d1e0d;
+    outline: none;
+    transition: background 0.2s;
+    list-style: none;
+}
+
+details[open] summary {
+    background: #da5729;
+    color: #fff;
+}
+
+details h3, details h4 {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+details img {
+    height: 150px;
+    width: 150px;
+    border-radius: 8px;
+    border: 4px solid #e9a17a;
+}
+
+/* Product grid inside details */
+details ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 24px;
+    margin: 0;
+}
+
+details ul li {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #0001; /* Sombra sutil para dar profundidad */
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos - About Us */
+
+/* Company Info Section with blurred BG */
+.company-info {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 32px 0;
+    z-index: 1;
+}
+
+.aboutus-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+    background: url('../IMG/Fondo_About.jpg') center center/cover no-repeat;
+    filter: blur(6px) brightness(0.85);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.company-card {
+    position: relative;
+    z-index: 1;
+    background: #fff8f3;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0002;
+    max-width: 600px;
+    padding: 32px 28px;
+    text-align: center;
+}
+.company-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border: 8px solid #fff;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 2px 8px #0001;
+}
+.company-name {
+    color: #da5729;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+.company-history {
+    color: #4d2c1a;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+}
+.company-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #4d2c1a;
+    font-size: 1.05rem;
+}
+.company-details li {
+    margin-bottom: 8px;
+}
+.company-details i {
+    color: #da5729;
+    margin-right: 8px;
+}
+
+/* Developers Section */
+.fotico {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border-radius: 50%; /* Circulo */
+}
+
+.dev-label {
+    background: #8b5a37;           /* Orange from your palette */
+    text-align: center;
+    color: #fffaf6;                /* Light text for contrast */
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 0 18px 0;        /* Add vertical padding */
+    box-shadow: 0 2px 8px #0001;   /* Subtle shadow for depth */
+    border-radius: 12px;           /* Rounded corners */
+}
+
+.desarrolladores {
+    padding: 48px 0 32px 0;
+    margin: 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.desarrolladores > div {
+    gap: 24px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.desarrolladores > div > div {
+    background: #fff8f3;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0001;
+    width: 320px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.RedesSociales {
+    margin-top:10px;
+}
+
+.btn-social i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+/* Estilos - Servicios */
+
+.delivery-section {
+    background: #fff8f3;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0002;
+    max-width: 500px;
+    margin: 48px auto 32px auto;
+    padding: 32px 24px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+
+.delivery-section:hover {
+    box-shadow: 0 8px 32px #0003;
+}
+
+.delivery-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    background: #fff;
+    box-shadow: 0 2px 8px #0001;
+    object-fit: contain;
+}
+
+.delivery-title {
+    font-size: 2rem;
+    color: #da5729;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.delivery-desc {
+    color: #4d2c1a;
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+
+.delivery-btn {
+    font-size: 1.1rem;
+    padding: 12px 28px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0001;
+    transition: background 0.2s, color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin: 32px auto 48px auto;
+    max-width: 1200px;
+}
+
+/* Service section with blurred background image */
+.service-section {
+    position: relative;
+    overflow: hidden;
+    background: #fff8f3;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0002;
+    max-width: 340px;
+    min-width: 260px;
+    flex: 1 1 300px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    margin: 0 8px;
+}
+
+.service-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+    opacity: 0.55;
+    filter: blur(3px) brightness(0.95);
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.2s;
+}
+
+/*--- Specific backgrounds for each service---*/
+/*----- (Lo unico que cambio del CSS OG, y sólo fueron los nombres xd) -----*/
+.empleado-bg::before {
+    background-image: url('../IMG/Fondo_Empleados.png');
+}
+.cliente-bg::before {
+    background-image: url('../IMG/Fondo_Clientes.jpg');
+}
+.proveedor-bg::before {
+    background-image: url('../IMG/Fondo_Proveedores.jpg');
+}
+/*--------------------------------------------------------------------------*/
+
+.service-content-bg {
+    background: rgba(255, 255, 255, 0.27);
+    backdrop-filter: blur(2px);
+    border-radius: 12px;
+    padding: 24px 16px;
+    display: inline-block;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px #0001;
+}
+
+/* Ensure content is above the bg */
+.service-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-section:hover {
+    box-shadow: 0 8px 32px #0003;
+    transform: translateY(-6px) scale(1.03);
+}
+
+.service-logo {
+    font-size: 3rem;
+    color: #da5729;
+    margin-bottom: 16px;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    color: #da5729;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.service-desc {
+    color: #4d2c1a;
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+/* Sobreescritura Boostrap*/
+    
+    /*Header*/
+
+.nav-link.active {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid white;
+}
+
+.fs-4, .fs-3{
+    color: white;
+    margin: 15px;
+}
+
+.nav-link{
+    color: white !important;
+    margin: 15px;
+}
+
+/*-------------------- Codigo Nuevo de Style, Para los Formularios y Registros --------------------*/
+
+.card-header {
+  background-color: #8d6c59 !important;
+  padding: 1rem;
+}
+
+.card-body {
+  background-color: #D9CEC8;
+  padding: 1.25rem;
+}
+
+.card-footer {
+  background-color: #f3ece6 !important;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+  border-color: #368979 !important;
+}
+
+.btn-success {
+  margin-top: 15px;
+  background-color: #368979!important;
+  border-color: #368979!important;
+}
+
+.btn-success:hover {
+  background-color: #2a7595!important;
+  border-color: #2a7595 !important;
+}
+
+.separador-con-texto {
+  position: relative;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.linea-divisoria {
+  border: none;
+  border-top: 2px solid #3D1E03;
+  margin: 0;
+}
+
+.texto-divisor {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #D9CEC8;
+  padding: 0 12px;
+  color: #5b646c;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+#previewContainer img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6); /* Fondo oscuro más elegante */
+  backdrop-filter: blur(3px);        /* Difuminado sutil */
+}
+
+/* Contenido del modal */
+.modal-contenido {
+  background-color: #fffaf6;
+  margin: 8% auto;
+  padding: 28px 24px;
+  border-radius: 16px;
+  width: 85%;
+  max-width: 550px;
+  color: #4b2e2e;
+  font-family: "Lobster Two", sans-serif; /* Igual que la página */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  animation: fadeInDown 0.4s ease;  /* Animación */
+}
+
+/* Título */
+.modal-contenido h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #cc5803;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Botón de cerrar */
+.cerrar {
+  color: #cc5803;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.cerrar:hover {
+  color: #a9441e;
+}
+
+/* Animación de entrada */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+}

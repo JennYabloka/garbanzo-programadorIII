@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Añadir Producto | TENEDOR SALVAJE</title>
+  <link rel="icon" href="IMG/logo.png">
+  <link rel="stylesheet" href="CSS/style.css">
+
+   <!--Inicio Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Fin Bootstrap-->
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Fascinate+Inline&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Pirata+One&display=swap" rel="stylesheet">
+    
+</head>
+<body class="lobster-two-regular-italic">
+    
+  <header class="d-flex justify-content-center py-3 mb-4 border-bottom">
+    <a href="productos.html" class="d-flex align-items-center text-decoration-none">
+      <img src="IMG/logo2_b.png" width="60" height="60" alt="Logo">
+      <span class="fs-3 fascinate-inline-regular ms-2">TENEDOR SALVAJE</span>
+    </a>
+  </header>
+
+
+  <main class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="card shadow-sm">
+          
+          <!-- Encabezado de la tarjeta -->
+          <div class="card-header text-white text-center">
+            <i class="bi bi-shop fs-1"></i>
+            <h2 class="h5 mb-0 fascinate-inline-regular">+ Agrega un Producto +</h2>
+          </div>
+          
+          <!-- Cuerpo con pestañas -->
+          <div class="card-body">
+            <div class="tab-content" id="pills-tabContent">
+              
+              <!-- Pestaña de Ingreso de Productos -->
+              <div class="tab-pane fade show active" id="pills-register" role="tabpanel">
+                <form enctype="multipart/form-data" action="PHP/registro_productos.php" method="post">
+
+                  <!--Nombre del Producto-->
+                  <div class="mb-3 input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-journal-plus"></i></span>
+                    <input type="text" name="producto" class="form-control" placeholder="Nombre del Producto" required>
+                  </div>
+                  <!--Descripción del Producto-->
+                  <div class="mb-3">
+                    <input type="text" name="descripcion" class="form-control" placeholder="Descripción Corta del Producto">
+                  </div>
+                  <!--Precio-->
+                  <div class="mb-3 input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-currency-dollar"></i></span>
+                    <input type="number" name="precio" class="form-control" placeholder="Precio" required>
+                  </div>
+                  <!--Categoria-->
+                  <div class="mb-3 input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-tags"></i></span>
+                    <input type="text" name="categoria" list="category" class="form-control" placeholder="Categoria" required>
+                    <datalist id="category">
+                      <option value="Entradas">
+                      <option value="Platos Principales">
+                      <option value="Hambuerguesas">
+                      <option value="Hot Dogs">
+                      <option value="Bebidas">
+                      <option value="Bebidas con Alcohol">
+                      <option value="Postres">
+                      <option value="Adicionales">
+                    </datalist>
+                  </div>
+                  <!--Proveedor (Empresa)-->
+                  <div class="mb-3 input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-person-walking"></i></span>
+                    <input type="text" name="proveedor" list="company" class="form-control" placeholder="Proveedor" required>
+                    <datalist id="company">
+                      <option value="Carnes La Nacional">
+                      <option value="Distribuidora Freskura">
+                      <option value="Panadería El Trigo">
+                      <option value="Bebidas Andinas S.A.S.">
+                      <option value="Postres Delicia">
+                    </datalist>
+                  </div>
+                  <!--Imagen del Producto-->
+                  <div class="mb-3 input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-file-earmark-image"></i></span>
+                    <input type="file" class="form-control" id="imagenProducto" name="imagenProducto" accept=".png, .jpg, .jpeg" required>
+                  </div>
+                  <div id="previewContainer" class="mt-2 text-center"></div>
+
+                  <!-- Data Adicional para el Producto -->
+                  <div class="separador-con-texto">
+                        <hr class="linea-divisoria">
+                        <span class="texto-divisor">Información Adicional</span>
+                  </div>
+
+                  <!-- Gramos (Peso de la porción)-->
+                   <div class="mb-3 input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-duffle"></i></span>
+                    <input type="number" name="gramos" class="form-control" placeholder="Peso por Porción" required>
+                  </div>
+                   <!-- Calorías (Valor energético)-->
+                   <div class="mb-3 input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-person-fill-exclamation"></i></span>
+                    <input type="number" name="calorias" class="form-control" placeholder="Calorías" required>
+                  </div>
+                  <!-- Vegano o Vegetariano -->
+                  <div class="mb-3 input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-egg-fried"></i></span>
+                    <input type="text" name="veg_ano" list="veg_ano" class="form-control" placeholder="¿Producto Vegano o Vegetariano?" required>
+                    <datalist id="veg_ano">
+                      <option value="Vegano">
+                      <option value="Vegetariano">
+                      <option value="No aplica">
+                    </datalist>
+                  </div>
+                  <!-- Nivel de Picante -->
+                  <div class="mb-3 input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-fire"></i></span>
+                    <input type="text" name="picor" list="picante" class="form-control" placeholder="Nivel de Picante" required>
+                    <datalist id="picante">
+                      <option value="🚫">
+                      <option value="🔥">
+                      <option value="🔥🔥">
+                      <option value="🔥🔥🔥">
+                      <option value="🔥🔥🔥🔥">
+                      <option value="🔥🔥🔥🔥🔥">
+                    </datalist>
+                  </div>
+                  <!--Bajo en Azúcar / Sin Azúcar-->
+                   <div class="mb-3 input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-cookie"></i></span>
+                    <input type="text" name="azucar" list="sugar" class="form-control" placeholder="Proporción en Azúcar" required>
+                    <datalist id="sugar">
+                      <option value="Alto en Azúcar">
+                      <option value="Azúcar Moderada">
+                      <option value="Bajo en Azúcar">
+                      <option value="Sin Azúcar">
+                    </datalist>
+                  </div>
+
+                  <button type="submit" class="btn btn-success w-100">Añadir</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pie de la tarjeta -->
+          <div class="card-footer text-center small">
+            Tenedor Salvaje &copy; 2025
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="JS/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo.png">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+
+    
+    <div class="calculator">
+        <div class="top-bar">
+            <button id="theme-toggle">🌙 Modo Oscuro</button>
+        </div>
+        
+        <!-- Pantallas -->
+        <div class="display-container">
+            <div id="operation-display"></div>
+            <div id="result-display">0</div>
+        </div>
+    
+        <!-- Botonera -->
+        <div class="buttons">
+            <button onclick="clearDisplay()">AC</button>
+            <button onclick="backspace()">DEL</button>
+            <button onclick="appendValue('(')">(</button> <!-- Se ve feo pero sirve asi que X jaja -->
+            <button onclick="appendValue(')')">)</button> <!-- Igual aqui :P -->
+
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('^')">^</button>
+                        
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('+')">+</button>
+            
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('-')">-</button>
+            
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="appendValue('/')">÷</button>
+            <button onclick="appendValue('*')">×</button>
+
+            <!--Funciones Especiales (Quedaron igual de feas que los parentesis pipipi)-->
+            <button onclick="appendValue('ln(')">ln</button>
+            <button onclick="appendValue('sqrt(')">√</button>
+            <button onclick="appendValue('!')">n!</button>
+            <button class="equal-btn" onclick="calculate()">=</button>
+        </div>
+        
+        <div class="history">
+            <h3>Historial</h3>
+            <ul id="history-list"></ul>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="../index.html" id="back-button">
+            🔄 Volver
+        </a>
+    </div>
+
+    <script src="JS/script.js"></script>
+
+</body>
+</html>
